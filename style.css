@@ -254,3 +254,9 @@ a {
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* Top bar in-page nav (anchors; JS scrolls — native #hash jump breaks inside scaled .site-canvas) */
+.site-nav-link {
+  text-decoration: none;
+  cursor: pointer;
+}

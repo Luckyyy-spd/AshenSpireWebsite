@@ -241,10 +241,10 @@
                 <div style="align-self: stretch; height: 6.31px; background: #372A1A"></div>
                 <div style="align-self: stretch; height: 6.76px; background: black"></div>
                 <div style="width: 271px; padding-top: 40px; padding-bottom: 40px; left: 21.86px; top: 30px; position: absolute; justify-content: space-between; align-items: center; display: inline-flex">
-                    <div onclick="scrollToSection('home-section')" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word; cursor: pointer;">Home</div>
-                    <div onclick="scrollToSection('about-section')" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word; cursor: pointer;">ABout</div>
-                    <div onclick="scrollToSection('team-section')" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word; cursor: pointer;">TEAM</div>
-                    <div onclick="scrollToSection('download-section')" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word; cursor: pointer;">Download</div>
+                    <a href="#home-section" class="site-nav-link" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word;">Home</a>
+                    <a href="#about-section" class="site-nav-link" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word;">ABout</a>
+                    <a href="#team-section" class="site-nav-link" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word;">TEAM</a>
+                    <a href="#download-section" class="site-nav-link" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word;">Download</a>
                 </div>
             </div>
             <div style="width: 27.05px; align-self: stretch; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
@@ -792,11 +792,36 @@
         window.open("https://drive.google.com/file/d/1ldkrbh0bi2hae44kjv_SpoPomHsql-8p/view?usp=sharing", "_blank", "noopener,noreferrer");
     }
 
-    function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (!section) return;
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
+    function getScrollY() {
+        return window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
     }
+
+    /**
+     * Sections live inside .site-canvas which uses transform: scale(). Browsers often get
+     * scrollIntoView wrong for transformed subtrees; use viewport rect + scroll offset instead.
+     */
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (!section) return;
+        function run() {
+            var y = section.getBoundingClientRect().top + getScrollY();
+            if (y < 0) y = 0;
+            var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            window.scrollTo({ top: y, left: 0, behavior: reduce ? "auto" : "smooth" });
+        }
+        requestAnimationFrame(function () {
+            requestAnimationFrame(run);
+        });
+    }
+
+    document.addEventListener("click", function (e) {
+        var a = e.target.closest("a.site-nav-link[href^='#']");
+        if (!a) return;
+        var id = a.getAttribute("href").slice(1);
+        if (!id) return;
+        e.preventDefault();
+        scrollToSection(id);
+    });
 
     function openTrailerModal() {
         const modal = document.getElementById("trailer-modal");
