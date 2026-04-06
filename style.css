@@ -1,0 +1,167 @@
+/* Base page styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #372a1a;
+  color: #ffffff;
+  font-family: Gameplay, sans-serif;
+}
+
+/* Reusable text styles extracted from the original notes */
+.text-powered-by {
+  color: #ffffff;
+  font-size: 10px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.text-tagline {
+  color: #eedcbd;
+  font-size: 18.12px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.text-button {
+  color: #ffffff;
+  font-size: 16.11px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.text-nav {
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.text-section-title {
+  color: #ffffff;
+  font-size: 40px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.text-about-highlight {
+  color: #8d2d14;
+  font-size: 20px;
+  font-family: PlayMeGames, sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  overflow-wrap: break-word;
+}
+
+.text-about-body {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: PlayMeGames, sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  overflow-wrap: break-word;
+}
+
+.text-team-name {
+  color: #ffffff;
+  font-size: 23.82px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.text-team-role {
+  color: #372a1a;
+  font-size: 17.33px;
+  font-family: PlayMeGames, sans-serif;
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+
+.text-download-message {
+  color: #ffffff;
+  font-size: 24px;
+  font-family: PlayMeGames, sans-serif;
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+
+.text-powered-by-small {
+  color: #ffffff;
+  font-size: 4.64px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.text-tagline-small {
+  color: #eedcbd;
+  font-size: 8.4px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.text-button-large {
+  color: #ffffff;
+  font-size: 16.38px;
+  font-family: Gameplay, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+/* Trailer modal */
+.trailer-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 16px;
+}
+
+.trailer-modal.is-open {
+  display: flex;
+}
+
+.trailer-modal__content {
+  position: relative;
+  width: min(960px, 95vw);
+  background: #111;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 36px 12px 12px;
+}
+
+.trailer-modal__video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 80vh;
+  background: #000;
+}
+
+.trailer-modal__close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+}
