@@ -775,18 +775,23 @@
 <div id="trailer-modal" class="trailer-modal" aria-hidden="true" onclick="onModalBackdropClick(event)">
     <div class="trailer-modal__content">
         <button class="trailer-modal__close" type="button" aria-label="Close trailer" onclick="closeTrailerModal()">X</button>
-        <iframe
-            id="trailer-frame"
-            class="trailer-modal__video"
-            src=""
-            title="Ashen Spire Trailer"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+        <div class="trailer-modal__iframe-wrap">
+            <iframe
+                id="trailer-frame"
+                class="trailer-modal__video"
+                src=""
+                title="Ashen Spire Trailer"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
     </div>
 </div>
 <script>
-    const trailerEmbedUrl = "https://drive.google.com/file/d/1pn4N23djYV9XSbqeMzotTgcvEQB4yBcE/preview";
+    /* Drive preview embed; file must be shared “Anyone with the link” for iframe playback */
+    const trailerEmbedUrl =
+        "https://drive.google.com/file/d/1pn4N23djYV9XSbqeMzotTgcvEQB4yBcE/preview";
 
     function openDownloadLink() {
         window.open("https://drive.google.com/file/d/1ldkrbh0bi2hae44kjv_SpoPomHsql-8p/view?usp=sharing", "_blank", "noopener,noreferrer");
