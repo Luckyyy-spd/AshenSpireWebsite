@@ -62,7 +62,7 @@ a {
   font-family: "Gameplay", sans-serif !important;
 }
 
-/* 1280px design: scale down only when viewport is narrower (width-based, no vertical squish) */
+/* 1280px design base; JS scales so layout width matches viewport (full bleed, scales up on wide monitors) */
 .site-viewport {
   width: 100%;
   min-height: 100vh;
@@ -76,7 +76,10 @@ a {
 .site-canvas-wrap {
   position: relative;
   flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
   overflow: visible;
 }
 
