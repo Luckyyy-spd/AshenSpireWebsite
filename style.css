@@ -28,14 +28,18 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
   background: #372a1a;
   color: #ffffff;
   font-family: "Gameplay", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 *,
@@ -44,15 +48,14 @@ body {
   font-family: "Gameplay", sans-serif;
 }
 
-/* Fixed 1280px design scaled to fit the viewport (single screen, no page scroll) */
+/* 1280px design: scale down only when viewport is narrower (width-based, no vertical squish) */
 .site-viewport {
   width: 100%;
-  height: 100vh;
-  max-height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: #372a1a;
 }
 
@@ -60,7 +63,7 @@ body {
   position: relative;
   flex-shrink: 0;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .site-canvas {

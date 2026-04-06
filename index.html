@@ -890,11 +890,7 @@
     function scrollToSection(sectionId) {
         const section = document.getElementById(sectionId);
         if (!section) return;
-        section.style.transition = "box-shadow 0.35s ease";
-        section.style.boxShadow = "0 0 0 4px rgba(255, 255, 255, 0.45)";
-        setTimeout(function () {
-            section.style.boxShadow = "";
-        }, 700);
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     function openTrailerModal() {
@@ -938,11 +934,7 @@
                 if (!canvas || !wrap) return;
                 var naturalH = canvas.scrollHeight || canvas.offsetHeight;
                 if (naturalH < 1) return;
-                var vw = window.innerWidth;
-                var vh = window.innerHeight;
-                var scaleW = vw / designW;
-                var scaleH = vh / naturalH;
-                var scale = Math.min(scaleW, scaleH);
+                var scale = Math.min(1, window.innerWidth / designW);
                 document.documentElement.style.setProperty("--layout-scale", String(scale));
                 wrap.style.width = designW * scale + "px";
                 wrap.style.height = naturalH * scale + "px";
