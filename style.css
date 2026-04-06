@@ -34,18 +34,32 @@ html {
   overflow-x: hidden;
 }
 
+html {
+  font-family: "Gameplay", sans-serif;
+}
+
 body {
   background: #372a1a;
   color: #ffffff;
-  font-family: "Gameplay", sans-serif;
+  font-family: "Gameplay", sans-serif !important;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
+/* Force Gameplay.ttf everywhere (beats UA styles; inline font-family is redundant but kept for clarity) */
 *,
 *::before,
 *::after {
-  font-family: "Gameplay", sans-serif;
+  font-family: "Gameplay", sans-serif !important;
+}
+
+button,
+input,
+textarea,
+select,
+option,
+a {
+  font-family: "Gameplay", sans-serif !important;
 }
 
 /* 1280px design: scale down only when viewport is narrower (width-based, no vertical squish) */
