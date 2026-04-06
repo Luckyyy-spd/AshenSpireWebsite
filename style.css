@@ -142,19 +142,19 @@ a {
 
 .text-about-highlight {
   color: #8d2d14;
-  font-size: 20px;
+  font-size: 12px;
   font-family: "Gameplay", sans-serif;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 16px;
   overflow-wrap: break-word;
 }
 
 .text-about-body {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 12px;
   font-family: "Gameplay", sans-serif;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 16px;
   overflow-wrap: break-word;
 }
 
