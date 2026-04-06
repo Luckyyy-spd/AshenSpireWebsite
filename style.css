@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Gameplay";
+  src: url("./Gameplay.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Visually hidden (keeps extra asset references in DOM without affecting layout) */
 .sr-only {
   position: absolute;
@@ -12,23 +20,70 @@
 }
 
 /* Base page styles */
+html {
+  --layout-scale: 1;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   background: #372a1a;
   color: #ffffff;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Gameplay", sans-serif;
+}
+
+/* Fixed 1280px design scaled to fit the viewport (single screen, no page scroll) */
+.site-viewport {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #372a1a;
+}
+
+.site-canvas-wrap {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.site-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  background: #372a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  box-sizing: border-box;
+  transform-origin: top left;
+  transform: scale(var(--layout-scale, 1));
 }
 
 /* Reusable text styles extracted from the original notes */
 .text-powered-by {
   color: #ffffff;
   font-size: 10px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -36,7 +91,7 @@ body {
 .text-tagline {
   color: #eedcbd;
   font-size: 18.12px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -44,7 +99,7 @@ body {
 .text-button {
   color: #ffffff;
   font-size: 16.11px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -52,7 +107,7 @@ body {
 .text-nav {
   color: #ffffff;
   font-size: 12px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -60,7 +115,7 @@ body {
 .text-section-title {
   color: #ffffff;
   font-size: 40px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -68,7 +123,7 @@ body {
 .text-about-highlight {
   color: #8d2d14;
   font-size: 20px;
-  font-family: PlayMeGames, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 500;
   line-height: 24px;
   overflow-wrap: break-word;
@@ -77,7 +132,7 @@ body {
 .text-about-body {
   color: #ffffff;
   font-size: 20px;
-  font-family: PlayMeGames, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 500;
   line-height: 24px;
   overflow-wrap: break-word;
@@ -86,7 +141,7 @@ body {
 .text-team-name {
   color: #ffffff;
   font-size: 23.82px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -94,7 +149,7 @@ body {
 .text-team-role {
   color: #372a1a;
   font-size: 17.33px;
-  font-family: PlayMeGames, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 500;
   overflow-wrap: break-word;
 }
@@ -102,7 +157,7 @@ body {
 .text-download-message {
   color: #ffffff;
   font-size: 24px;
-  font-family: PlayMeGames, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 500;
   overflow-wrap: break-word;
 }
@@ -110,7 +165,7 @@ body {
 .text-powered-by-small {
   color: #ffffff;
   font-size: 4.64px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -118,7 +173,7 @@ body {
 .text-tagline-small {
   color: #eedcbd;
   font-size: 8.4px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -126,7 +181,7 @@ body {
 .text-button-large {
   color: #ffffff;
   font-size: 16.38px;
-  font-family: Gameplay, sans-serif;
+  font-family: "Gameplay", sans-serif;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -171,6 +226,7 @@ body {
   border: none;
   background: #ffffff;
   color: #000000;
+  font-family: "Gameplay", sans-serif;
   font-weight: 700;
   font-size: 16px;
   width: 28px;

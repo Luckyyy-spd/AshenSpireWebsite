@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-<div style="width: 100%; height: 100%; position: relative; background: #372A1A; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 24px; display: inline-flex">
+<div class="site-viewport">
+    <div class="site-canvas-wrap">
+        <div class="site-canvas">
     <div id="home-section" style="align-self: stretch; height: 720px; position: relative">
         <img style="width: 1319.80px; height: 741.90px; left: -10px; top: 0px; position: absolute; box-shadow: 12px 12px 12px; filter: blur(6px)" src="./BG HOME 1 1.png" />
         <div style="left: 95px; top: 144px; position: absolute; justify-content: flex-start; align-items: center; gap: 88px; display: inline-flex">
             <div style="flex-direction: column; justify-content: center; align-items: center; gap: 12px; display: inline-flex">
                 <div style="justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                    <div style="text-align: center; color: white; font-size: 10px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">Powered by</div>
+                    <div style="text-align: center; color: white; font-size: 10px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">Powered by</div>
                     <img style="width: 111px; height: 38.66px" src="./62e132087fe3599fdd46ecb5 1.png" />
                 </div>
                 <img style="width: 429px; height: 235px" src="./NO BG TITLE 2.png" />
                 <div style="padding-top: 12px; padding-bottom: 12px; justify-content: center; align-items: center; display: inline-flex">
-                    <div style="text-align: center; color: #EEDCBD; font-size: 18.12px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">journey through the spooky woods</div>
+                    <div style="text-align: center; color: #EEDCBD; font-size: 18.12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">journey through the spooky woods</div>
                 </div>
                 <div style="width: 450.17px; padding-top: 12px; justify-content: flex-start; align-items: center; gap: 8.68px; display: inline-flex">
                     <div style="width: 189.83px; height: 64px; justify-content: center; align-items: center; display: flex">
@@ -59,7 +61,7 @@
                             <div style="align-self: stretch; height: 3.72px; background: #784A12"></div>
                             <div style="align-self: stretch; height: 3.99px; background: black"></div>
                             <div onclick="openDownloadLink()" style="left: 18.37px; top: 23.14px; position: absolute; justify-content: flex-start; align-items: center; gap: 2.52px; display: inline-flex; cursor: pointer;">
-                                <div style="text-align: center; color: white; font-size: 16.11px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">DOWNLOAD</div>
+                                <div style="text-align: center; color: white; font-size: 16.11px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">DOWNLOAD</div>
                                 <img style="width: 19.13px; height: 19.13px" src="./downloading 1.png" />
                             </div>
                         </div>
@@ -131,7 +133,7 @@
                             <div style="align-self: stretch; height: 3.72px; background: #1B2638"></div>
                             <div style="align-self: stretch; height: 3.99px; background: black"></div>
                             <div id="watch-trailer-trigger" onclick="openTrailerModal()" style="left: 25.14px; top: 21.86px; position: absolute; justify-content: flex-start; align-items: center; gap: 4.34px; display: inline-flex; cursor: pointer;">
-                                <div style="text-align: center; color: white; font-size: 16.11px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">Watch Trailer</div>
+                                <div style="text-align: center; color: white; font-size: 16.11px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">Watch Trailer</div>
                                 <img style="width: 21.69px; height: 21.69px" src="./arrow-button 1.png" />
                             </div>
                         </div>
@@ -238,10 +240,10 @@
                 <div style="align-self: stretch; height: 6.31px; background: #372A1A"></div>
                 <div style="align-self: stretch; height: 6.76px; background: black"></div>
                 <div style="width: 271px; padding-top: 40px; padding-bottom: 40px; left: 21.86px; top: 30px; position: absolute; justify-content: space-between; align-items: center; display: inline-flex">
-                    <div onclick="scrollToSection('home-section')" style="text-align: center; color: white; font-size: 12px; font-family: Gameplay; font-weight: 400; word-wrap: break-word; cursor: pointer;">Home</div>
-                    <div onclick="scrollToSection('about-section')" style="text-align: center; color: white; font-size: 12px; font-family: Gameplay; font-weight: 400; word-wrap: break-word; cursor: pointer;">ABout</div>
-                    <div onclick="scrollToSection('team-section')" style="text-align: center; color: white; font-size: 12px; font-family: Gameplay; font-weight: 400; word-wrap: break-word; cursor: pointer;">TEAM</div>
-                    <div onclick="scrollToSection('download-section')" style="text-align: center; color: white; font-size: 12px; font-family: Gameplay; font-weight: 400; word-wrap: break-word; cursor: pointer;">Download</div>
+                    <div onclick="scrollToSection('home-section')" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word; cursor: pointer;">Home</div>
+                    <div onclick="scrollToSection('about-section')" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word; cursor: pointer;">ABout</div>
+                    <div onclick="scrollToSection('team-section')" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word; cursor: pointer;">TEAM</div>
+                    <div onclick="scrollToSection('download-section')" style="text-align: center; color: white; font-size: 12px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word; cursor: pointer;">Download</div>
                 </div>
             </div>
             <div style="width: 27.05px; align-self: stretch; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
@@ -278,7 +280,7 @@
     <div id="about-section" style="align-self: stretch; height: 720px; position: relative; background: white">
         <img style="width: 1542px; height: 823px; left: -102px; top: -90px; position: absolute; box-shadow: 12px 12px 12px; filter: blur(6px)" src="./image 494.png" />
         <div style="padding-top: 24px; padding-bottom: 24px; left: 565px; top: 8px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-            <div style="text-align: center; color: white; font-size: 40px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">about</div>
+            <div style="text-align: center; color: white; font-size: 40px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">about</div>
         </div>
         <div style="left: 162px; top: 140px; position: absolute; justify-content: center; align-items: center; gap: 124px; display: inline-flex">
             <div style="width: 474px; height: 439px; position: relative; justify-content: center; align-items: center; display: flex">
@@ -348,7 +350,7 @@
                         <div style="width: 9.42px; height: 8.16px; left: 28.20px; top: 27.92px; position: absolute; background: black"></div>
                     </div>
                 </div>
-                <div style="width: 386px; left: 44px; top: 63px; position: absolute; text-align: justify"><span style="color: #8D2D14; font-size: 20px; font-family: PlayMeGames; font-weight: 500; line-height: 24px; word-wrap: break-word">Ashen Spire</span><span style="color: white; font-size: 20px; font-family: PlayMeGames; font-weight: 500; line-height: 24px; word-wrap: break-word"> is a fast-paced dungeon-crawler action game where you battle through frozen ruins using one of three unique classes: the Swordsman's melee slash, the Mage's arcane beams, or the Archer's precise volleys. Defeat increasingly challenging enemies, epic bosses like the Golem and Yeti, and crush destructible environments to collect loot and upgrades. Master your stamina resources, discover hidden treasures, and progress through multiple challenging maps in solo adventure or cooperative multiplayer. Will you escape the Spire?</span></div>
+                <div style="width: 386px; left: 44px; top: 63px; position: absolute; text-align: justify"><span style="color: #8D2D14; font-size: 20px; font-family: 'Gameplay', sans-serif; font-weight: 500; line-height: 24px; word-wrap: break-word">Ashen Spire</span><span style="color: white; font-size: 20px; font-family: 'Gameplay', sans-serif; font-weight: 500; line-height: 24px; word-wrap: break-word"> is a fast-paced dungeon-crawler action game where you battle through frozen ruins using one of three unique classes: the Swordsman's melee slash, the Mage's arcane beams, or the Archer's precise volleys. Defeat increasingly challenging enemies, epic bosses like the Golem and Yeti, and crush destructible environments to collect loot and upgrades. Master your stamina resources, discover hidden treasures, and progress through multiple challenging maps in solo adventure or cooperative multiplayer. Will you escape the Spire?</span></div>
                 <img style="width: 77px; height: 100px; left: -19px; top: 343px; position: absolute" src="./Slime-1.png 1 (1).png" />
             </div>
             <img style="width: 358px; height: 337px; transform: rotate(180deg); transform-origin: top left" src="./Golem_1_attack-1.png (3) 2.png" />
@@ -357,7 +359,7 @@
     <div id="team-section" style="width: 1280px; height: 720px; position: relative">
         <img style="width: 1516px; height: 777px; left: -118px; top: -29px; position: absolute; box-shadow: 12px 12px 12px; filter: blur(6px)" src="./image 497.png" />
         <div style="padding-top: 24px; padding-bottom: 24px; left: 403.50px; top: 46px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-            <div style="text-align: center; color: white; font-size: 40px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">DEVELOPMENT TEAM</div>
+            <div style="text-align: center; color: white; font-size: 40px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">DEVELOPMENT TEAM</div>
         </div>
         <div style="left: 153px; top: 210px; position: absolute; justify-content: flex-start; align-items: center; gap: 64px; display: inline-flex">
             <div style="width: 281.86px; height: 332px; position: relative; justify-content: center; align-items: center; display: flex">
@@ -462,8 +464,8 @@
                     <div style="width: 7.46px; height: 8.53px; background: black"></div>
                     <div style="width: 5.33px; height: 5.33px; background: black"></div>
                     <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8.66px; display: flex">
-                        <div style="align-self: stretch; text-align: center; color: white; font-size: 23.82px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">Janssen SOmbrio</div>
-                        <div style="width: 156px; text-align: center; color: #372A1A; font-size: 17.33px; font-family: PlayMeGames; font-weight: 500; word-wrap: break-word">UI/UX & Sound Designer</div>
+                        <div style="align-self: stretch; text-align: center; color: white; font-size: 23.82px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">Janssen SOmbrio</div>
+                        <div style="width: 156px; text-align: center; color: #372A1A; font-size: 17.33px; font-family: 'Gameplay', sans-serif; font-weight: 500; word-wrap: break-word">UI/UX & Sound Designer</div>
                     </div>
                 </div>
             </div>
@@ -586,8 +588,8 @@
                     <div style="width: 7.46px; height: 8.53px; background: #899CB3"></div>
                     <div style="width: 8.53px; height: 7.46px; background: #899CB3"></div>
                     <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8.66px; display: flex">
-                        <div style="align-self: stretch; text-align: center; color: white; font-size: 23.82px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">Lance amiel samaniego</div>
-                        <div style="align-self: stretch; text-align: center; color: #372A1A; font-size: 17.33px; font-family: PlayMeGames; font-weight: 500; word-wrap: break-word">Project Manager & Programmer</div>
+                        <div style="align-self: stretch; text-align: center; color: white; font-size: 23.82px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">Lance amiel samaniego</div>
+                        <div style="align-self: stretch; text-align: center; color: #372A1A; font-size: 17.33px; font-family: 'Gameplay', sans-serif; font-weight: 500; word-wrap: break-word">Project Manager & Programmer</div>
                     </div>
                 </div>
             </div>
@@ -680,8 +682,8 @@
                         <div style="width: 10.67px; height: 6.22px; left: 7.11px; top: 58.67px; position: absolute; background: #7E5140"></div>
                     </div>
                     <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8.66px; display: flex">
-                        <div style="align-self: stretch; text-align: center; color: white; font-size: 23.82px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">Emerson dela Cruz</div>
-                        <div style="width: 173px; text-align: center; color: #372A1A; font-size: 17.33px; font-family: PlayMeGames; font-weight: 500; word-wrap: break-word">Level Designer & Animator</div>
+                        <div style="align-self: stretch; text-align: center; color: white; font-size: 23.82px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">Emerson dela Cruz</div>
+                        <div style="width: 173px; text-align: center; color: #372A1A; font-size: 17.33px; font-family: 'Gameplay', sans-serif; font-weight: 500; word-wrap: break-word">Level Designer & Animator</div>
                     </div>
                 </div>
             </div>
@@ -692,7 +694,7 @@
     <div id="download-section" style="width: 1280px; height: 720px; position: relative">
         <img style="width: 1319.80px; height: 741.90px; left: -19.90px; top: -11.45px; position: absolute; box-shadow: 12px 12px 12px; filter: blur(6px)" src="./BG HOME 1 1 (2).png" />
         <div style="padding-top: 24px; padding-bottom: 24px; left: 458.50px; top: 46px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-            <div style="text-align: center; color: white; font-size: 40px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">DOWNLOAD NOW!</div>
+            <div style="text-align: center; color: white; font-size: 40px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">DOWNLOAD NOW!</div>
         </div>
         <div style="width: 495px; height: 389px; left: 392px; top: 220px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
             <div style="width: 34.37px; align-self: stretch; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
@@ -762,15 +764,15 @@
                 </div>
             </div>
             <div style="width: 379px; height: 299px; left: 58px; top: 45px; position: absolute; flex-direction: column; justify-content: space-between; align-items: center; display: inline-flex">
-                <div style="align-self: stretch; text-align: center; color: white; font-size: 24px; font-family: PlayMeGames; font-weight: 500; word-wrap: break-word">Download Ashen Spire now and start your adventure journey!</div>
+                <div style="align-self: stretch; text-align: center; color: white; font-size: 24px; font-family: 'Gameplay', sans-serif; font-weight: 500; word-wrap: break-word">Download Ashen Spire now and start your adventure journey!</div>
                 <div style="flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
                     <div style="justify-content: flex-start; align-items: center; gap: 5.57px; display: inline-flex">
-                        <div style="text-align: center; color: white; font-size: 4.64px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">Powered by</div>
+                        <div style="text-align: center; color: white; font-size: 4.64px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">Powered by</div>
                         <img style="width: 51.49px; height: 17.93px" src="./62e132087fe3599fdd46ecb5 1 (1).png" />
                     </div>
                     <img style="width: 199px; height: 109.01px" src="./NO BG TITLE 2 (1).png" />
                     <div style="padding-top: 5.57px; padding-bottom: 5.57px; justify-content: center; align-items: center; display: inline-flex">
-                        <div style="text-align: center; color: #EEDCBD; font-size: 8.40px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">journey through the spooky woods</div>
+                        <div style="text-align: center; color: #EEDCBD; font-size: 8.40px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">journey through the spooky woods</div>
                     </div>
                 </div>
                 <div style="width: 193px; height: 65.07px; justify-content: center; align-items: center; display: inline-flex">
@@ -812,7 +814,7 @@
                         <div style="align-self: stretch; height: 3.78px; background: #784A12"></div>
                         <div style="align-self: stretch; height: 4.05px; background: black"></div>
                         <div onclick="openDownloadLink()" style="left: 18.51px; top: 23.52px; position: absolute; justify-content: flex-start; align-items: center; gap: 2.56px; display: inline-flex; cursor: pointer;">
-                            <div style="text-align: center; color: white; font-size: 16.38px; font-family: Gameplay; font-weight: 400; word-wrap: break-word">DOWNLOAD</div>
+                            <div style="text-align: center; color: white; font-size: 16.38px; font-family: 'Gameplay', sans-serif; font-weight: 400; word-wrap: break-word">DOWNLOAD</div>
                             <img style="width: 19.45px; height: 19.45px" src="./downloading 1 (1).png" />
                         </div>
                     </div>
@@ -853,6 +855,8 @@
         </div>
     </div>
     <img style="width: 63px; height: 63px; left: 741px; top: 1972px; position: absolute" src="./tree1-1.png 1 (1).png" />
+        </div>
+    </div>
 </div>
 <div class="sr-only" aria-hidden="true">
     <img src="./BG HOME 1 1 (1).png" alt="" />
@@ -886,7 +890,11 @@
     function scrollToSection(sectionId) {
         const section = document.getElementById(sectionId);
         if (!section) return;
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        section.style.transition = "box-shadow 0.35s ease";
+        section.style.boxShadow = "0 0 0 4px rgba(255, 255, 255, 0.45)";
+        setTimeout(function () {
+            section.style.boxShadow = "";
+        }, 700);
     }
 
     function openTrailerModal() {
@@ -920,6 +928,45 @@
             closeTrailerModal();
         }
     });
+
+    (function layoutScale() {
+        var designW = 1280;
+        function sync() {
+            requestAnimationFrame(function () {
+                var canvas = document.querySelector(".site-canvas");
+                var wrap = document.querySelector(".site-canvas-wrap");
+                if (!canvas || !wrap) return;
+                var naturalH = canvas.scrollHeight || canvas.offsetHeight;
+                if (naturalH < 1) return;
+                var vw = window.innerWidth;
+                var vh = window.innerHeight;
+                var scaleW = vw / designW;
+                var scaleH = vh / naturalH;
+                var scale = Math.min(scaleW, scaleH);
+                document.documentElement.style.setProperty("--layout-scale", String(scale));
+                wrap.style.width = designW * scale + "px";
+                wrap.style.height = naturalH * scale + "px";
+            });
+        }
+        window.addEventListener("resize", sync);
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", sync);
+        } else {
+            sync();
+        }
+        window.addEventListener("load", function () {
+            sync();
+            sync();
+        });
+        if (window.ResizeObserver) {
+            document.addEventListener("DOMContentLoaded", function () {
+                var canvas = document.querySelector(".site-canvas");
+                if (!canvas) return;
+                var ro = new ResizeObserver(sync);
+                ro.observe(canvas);
+            });
+        }
+    })();
 </script>
 </body>
 </html>
